@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="app">
+			<input type="text" v-model="userKey" @Keyup.enter="show()" name="" id=""/>
+			<br>
+			{{userKey}}
+		</div>
+		<script type="text/javascript">
+			let v=new Vue({
+				el:"#app";
+				data:{
+					userKey:''
+				},
+				method:{
+					show(){
+						alert(v.userKey.charCodeAt());
+					}
+				}
+			})
+		</script>
+	</body>
+</html>
